@@ -1,0 +1,35 @@
+proxies:
+
+- name: Game sg 8/8/22
+  server: 104.18.22.187
+  port: 443
+  type: vmess
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sg1-v2ray.sshkit.org
+  network: ws
+  ws-opts:
+   path: /sshkit/5206194863/62c7702a0ea8b/
+   headers:
+    Host: sg1-v2ray.sshkit.org
+  udp: true
+
+- name: Game USA unlimited 
+  server: 104.18.22.187
+  port: 443
+  type: vmess
+  uuid: 36f20d01-79a1-4370-90a3-d3b536d5fe44
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: gt.setopratama.com
+  network: ws
+  ws-opts:
+   path: /d407d4904/
+   headers:
+    Host: gt.setopratama.com
+  udp: true
