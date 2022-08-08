@@ -122,7 +122,7 @@ proxy-groups:
 proxy-providers:
   7six Provider 1:
     type: http
-    path: ./7six.yaml
+    path: "./confs/7six.yaml"
     url: https://raw.githubusercontent.com/7siix/7sixx_CMFA_Magisk/main/7six._magisk_provider.yaml
     interval: 3600
     health-check:
