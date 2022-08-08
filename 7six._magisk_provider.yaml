@@ -17,19 +17,19 @@ proxies:
     Host: sg1-v2ray.sshkit.org
   udp: true
 
-- name: Game USA unlimited 
-  server: 104.18.22.187
+- name: opok zeus 5/9/22
+  server: 104.17.2.81
   port: 443
   type: vmess
-  uuid: 36f20d01-79a1-4370-90a3-d3b536d5fe44
+  uuid: 3c460dd9-dead-4d7a-8cc5-239e3da28119
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: gt.setopratama.com
+  servername: api.midtrans.com
   network: ws
   ws-opts:
-   path: /d407d4904/
+   path: ws://api.midtrans.com/vmessws
    headers:
-    Host: gt.setopratama.com
+    Host: zeus.zeaking.my.id
   udp: true
