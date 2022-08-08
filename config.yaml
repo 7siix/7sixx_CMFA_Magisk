@@ -32,11 +32,11 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter: ['networktest.twilio.com', '+.twilio.com', 'connect.rom.miui.com', '+.msftnsci.com', '+.msftconnecttest.com', '+.gstatic.com', '+.stun.*.*', '+.stun.*.*.*', '+.stun.*.*.*.*', '+.time.*', '+.time.*.*', '+.time.*.*.*', '+.ntp.*', '+.ntp.*.*', '+.ntp.*.*.*']
-  nameserver:
-    - 172.67.199.34 ## GANTI BUG YG KALIAN GUNAKAN 
-    - https://1.1.1.1/dns-query
-    - tls://dns.quad9.net
-    - quic://dns.adguard.com
+ # nameserver:
+ #   - 172.67.199.34 ## GANTI BUG YG KALIAN GUNAKAN 
+ #   - https://1.1.1.1/dns-query
+ #   - tls://dns.quad9.net
+ #   - quic://dns.adguard.com
 #  proxy-server-nameserver:
 #    - 172.67.199.34
 #  fallback:
