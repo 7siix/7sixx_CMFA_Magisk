@@ -1,5 +1,4 @@
 proxies:
-
 - name: Game sg 8/8/22
   server: 104.18.22.187
   port: 443
@@ -16,7 +15,6 @@ proxies:
    headers:
     Host: sg1-v2ray.sshkit.org
   udp: true
-
 - name: opok zeus 5/9/22
   server: 104.17.2.81
   port: 443
