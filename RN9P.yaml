@@ -1,0 +1,294 @@
+mode: rule
+allow-lan: true
+unified-delay: true
+bind-address: '*'
+log-level: silent
+ipv6: false
+geodata-mode: true
+external-controller: 0.0.0.0:9090
+external-ui: dashboard/dist
+tcp-concurrent: false
+interface-name: ""
+enable-process: false
+geodata-loader: memconservative
+inbound-tfo: true
+secret: ""
+profile:
+  store-selected: true
+  store-fake-ip: false
+# geox-url: {mmdb: "https://cdn.jsdelivr.net/gh/Dreamacro/maxmind-geoip@release/Country.mmdb", geoip: "https://github.com/v2fly/geoip/raw/release/cn.dat", geosite: "https://github.com/taamarin/v2ray-rules-dat/raw/release/geosite.dat"}
+# experimental:
+  # fingerprint: xxxx # 同 experimental.fingerprints 使用 sha256 指纹，配置协议独立的指纹，将忽略 experimental.fingerprints
+dns:
+  enable: true
+  device: Meta
+  ipv6: true
+  prefer-h3: false #start DOH to use http/3 first
+  default-nameserver:
+    - 1.1.1.1
+    - 9.9.9.9
+  listen: 0.0.0.0:1053
+  use-hosts: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter: ['networktest.twilio.com', '+.twilio.com', 'connect.rom.miui.com', '+.msftnsci.com', '+.msftconnecttest.com', '+.gstatic.com', '+.stun.*.*', '+.stun.*.*.*', '+.stun.*.*.*.*', '+.time.*', '+.time.*.*', '+.time.*.*.*', '+.ntp.*', '+.ntp.*.*', '+.ntp.*.*.*']
+  nameserver:
+    - 172.67.199.34 ## GANTI BUG YG KALIAN GUNAKAN 
+    - https://1.1.1.1/dns-query
+    - tls://dns.quad9.net
+    - quic://dns.adguard.com
+#  proxy-server-nameserver:
+#    - 172.67.199.34
+#  fallback:
+#    - https://dns.google/dns-query
+#    - https://1.1.1.1/dns-query
+#  fallback-filter:
+#    geoip: false
+#    geoip-code: "ID"
+#    geosite:
+#      - GFW
+#    ipcidr:
+#      - 0.0.0.0/32
+#    domain: ['+.google.com', '+.facebook.com', '+.youtube.com', '+.githubusercontent.com', '+.googlevideo.com', '+.msftconnecttest.com', '+.msftncsi.com', 'msftconnecttest.com', 'msftncsi.com']
+# feature CLASH PREMIUM 
+# auto-redir:
+#  enable: false
+#  auto-route: false
+tun:
+  enable: false
+  stack: system
+  dns-hijack:
+    - any:53
+  auto-route: false
+  auto-detect-interface: false
+sniffer:
+  enable: false
+  sniffing: ['tls', 'http']
+  force-domain: ['+']
+  skip-domain: ['+.google.com']
+  port-whitelist: ['443', '80']
+hosts:
+  'cacerts.digicert.com': 172.67.199.34
+tproxy-port: 9898
+proxies:
+#config 30 hari
+- name: Opok tsel 6/9/22 exp
+  server: 104.17.3.81
+  port: 443
+  type: vmess
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: api.midtrans.com
+  network: ws
+  ws-opts:
+   path: ws://api.midtrans.com/sshkit/5206194863/62ed048caa04e/
+   headers:
+    Host: sg4-v2ray.sshkit.org
+  udp: true
+- name: Opok tsel zeus 6/9/22 exp
+  server: 104.17.3.81
+  port: 443
+  type: vmess
+  uuid: 3c460dd9-dead-4d7a-8cc5-239e3da28119
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: api.midtrans.com
+  network: ws
+  ws-opts:
+   path: ws://api.midtrans.com/vmessws
+   headers:
+    Host: zeus.zeaking.my.id
+  udp: true
+- name: opok ID Uninet
+  server: 104.17.2.81
+  port: 443
+  type: trojan
+  password: 0ce362c0-1ac1-11ed-92f3-1239d0255272
+  skip-cert-verify: true
+  sni: api.midtrans.com
+  network: ws
+  ws-opts: 
+    path: ws://api.midtrans.com/howdy
+    headers: 
+      Host: idtj-uninet.bonds.id
+  udp: true
+- name: opok biznet banten
+  server: 104.17.2.81
+  port: 443
+  type: trojan
+  password: f36e2360-155c-11ed-9dc5-1239d0255272
+  skip-cert-verify: true
+  sni: api.midtrans.com
+  network: ws
+  ws-opts: 
+    path: ws://api.midtrans.com/howdy
+    headers: 
+      Host: id5-trojan.bonds.id
+  udp: true
+- name: opok biznet jakarta
+  server: 104.17.3.81
+  port: 443
+  type: trojan
+  password: 7f88f400-1ac0-11ed-8d4b-1239d0255272
+  skip-cert-verify: true
+  sni: api.midtrans.com
+  network: ws
+  ws-opts: 
+    path: ws://api.midtrans.com/howdy
+    headers: 
+      Host: id2-trojan.bonds.id
+  udp: true
+- name: Opok ID-IKD
+  server: 104.17.3.81
+  port: 443
+  type: trojan
+  password: e365da70-1ac0-11ed-aab0-1239d0255272
+  skip-cert-verify: true
+  sni: api.midtrans.com
+  network: ws
+  ws-opts: 
+    path: ws://api.midtrans.com/howdy
+    headers: 
+      Host: idtj-ikd.bonds.id
+- name: Opok ID HERZA
+  server: 104.17.3.81
+  port: 443
+  type: trojan
+  password: bac7d8f0-1abf-11ed-aaf1-1239d0255272
+  skip-cert-verify: true
+  sni: idtj-herza.bonds.id
+  network: ws
+  ws-opts: 
+    path: ws://api midtrans.com/howdy
+    headers: 
+      Host: api.midtrans.com
+  udp: true
+- name: Opok zeus 05/9/22
+  server: 104.17.3.81
+  port: 443
+  type: vless
+  uuid: 573ed6c9-c799-43c3-8461-62a4c64a7a35
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: api.midtrans.com
+  network: ws
+  ws-opts: 
+    path: ws://api.midtrans.com/vlessws
+    headers: 
+      Host: zeus.zeaking.my.id
+  udp: true
+# 7 hari
+- name: opok IKD 20/8/22 exp
+  server: 104.17.3.81
+  port: 443
+  type: vless
+  uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: api.midtrans.com
+  network: ws
+  ws-opts: 
+    path: ws://api.midtrans.com/fastssh/ggdr/62f7590ac85c7/
+    headers: 
+      Host: id-1.vless.co
+  udp: true
+proxy-groups:
+  - name: "7six"
+    type: select
+    proxies:
+      - Opok tsel 6/9/22 exp
+      - Opok tsel zeus 6/9/22 exp
+      - opok biznet banten
+      - opok biznet jakarta
+      - Opok ID-IKD
+      - Opok ID HERZA
+      - Opok zeus 05/9/22
+      - opok IKD 20/8/22 exp
+  - name: Auto 
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+       - Opok tsel 6/9/22 exp
+       - opok biznet banten
+       - Opok zeus 05/9/22
+  - name: Load balance
+    type: load-balance
+    strategy: consistent-hashing
+    disable-udp: false
+    proxies:
+        - Opok tsel 6/9/22 exp
+        - opok biznet jakarta
+        - Opok tsel zeus 6/9/22 exp
+        - Opok ID-IKD
+        - Opok ID HERZA
+        - opok ID Uninet
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+#  - name: GAMEMAX
+#    type: select
+#    proxies:
+#      - DIRECT
+#    url: 'http://www.gstatic.com/generate_204'
+#    interval: 100
+  - name: SOSMED
+    type: select
+    proxies:
+      - Auto
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 100
+  - name: STREAMING
+    type: select
+    proxies:
+      - Load balance
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 100
+  - name: "Ads"
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+rule-providers:
+#  Gaming:
+#     type: http
+#     behavior: classical
+#     path: "./confs/ruleset/Gamemax.yaml"
+#     url: https://raw.githubusercontent.com/7siix/punya76/main/ruleGamemax.yaml
+#     interval: 86400
+  Sosmed:
+    type: http
+    behavior: domain
+    path: "./confs/ruleset/Sosmed.yaml"
+    url: https://raw.githubusercontent.com/7siix/punya76/main/Rule-Sosmed.yaml
+    interval: 86400
+  Streaming:
+    type: http
+    behavior: classical
+    path: "./confs/ruleset/Streaming.yaml"
+    url: https://raw.githubusercontent.com/7siix/punya76/main/Streaming.yaml
+    interval: 86400
+  ADs:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
+    path: ./confs/ruleset/all-ads.yaml
+    interval: 86400 
+rules:
+  - GEOSITE,Facebook,SOSMED
+  - GEOSITE,instagram,SOSMED
+  - GEOSITE,youtube,STREAMING
+  - PROCESS-NAME,com.vanced.android.youtube,STREAMING
+  - PROCESS-NAME,com.yy.hiyo,STREAMING
+#  - RULE-SET,Gaming,GAMEMAX
+  - RULE-SET,Sosmed,SOSMED
+  - RULE-SET,Streaming,STREAMING
+  - RULE-SET,ADs,Ads
+  - MATCH,7six
