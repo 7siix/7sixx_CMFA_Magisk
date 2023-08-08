@@ -168,21 +168,21 @@ proxies:
     headers: 
       Host: api.midtrans.com
   udp: true
-- name: Opok zeus 05/9/22
-  server: 104.17.3.81
-  port: 443
-  type: vless
-  uuid: 573ed6c9-c799-43c3-8461-62a4c64a7a35
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: api.midtrans.com
-  network: ws
-  ws-opts: 
-    path: ws://api.midtrans.com/vlessws
-    headers: 
-      Host: zeus.zeaking.my.id
-  udp: true
+#- name: Opok zeus 05/9/22
+#  server: 104.17.3.81
+#  port: 443
+#  type: vless
+#  uuid: 573ed6c9-c799-43c3-8461-62a4c64a7a35
+#  cipher: auto
+#  tls: true
+#  skip-cert-verify: true
+#  servername: api.midtrans.com
+#  network: ws
+#  ws-opts: 
+#    path: ws://api.midtrans.com/vlessws
+#    headers: 
+#      Host: zeus.zeaking.my.id
+#  udp: true
 # 7 hari
 #- name: opok IKD 20/8/22 exp
 #  server: 104.17.3.81
@@ -209,7 +209,7 @@ proxy-groups:
       - opok biznet jakarta
 #      - Opok ID-IKD
       - Opok ID HERZA
-      - Opok zeus 05/9/22
+#      - Opok zeus 05/9/22
       - opok IKD 20/8/22 exp
   - name: Auto 
     type: url-test
@@ -219,7 +219,7 @@ proxy-groups:
     proxies:
        - Opok tsel 6/9/22 exp
        - opok biznet banten
-       - Opok zeus 05/9/22
+ #      - Opok zeus 05/9/22
   - name: Load balance
     type: load-balance
     strategy: consistent-hashing
