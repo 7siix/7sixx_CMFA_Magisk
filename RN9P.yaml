@@ -285,10 +285,10 @@ rules:
 #  - GEOSITE,Facebook,SOSMED
 #  - GEOSITE,instagram,SOSMED
 #  - GEOSITE,youtube,STREAMING
-  - PROCESS-NAME,com.vanced.android.youtube,STREAMING
-  - PROCESS-NAME,com.yy.hiyo,STREAMING
+#  - PROCESS-NAME,com.vanced.android.youtube,STREAMING
+#  - PROCESS-NAME,com.yy.hiyo,STREAMING
 #  - RULE-SET,Gaming,GAMEMAX
-  - RULE-SET,Sosmed,SOSMED
-  - RULE-SET,Streaming,STREAMING
-  - RULE-SET,ADs,Ads
+#  - RULE-SET,Sosmed,SOSMED
+#  - RULE-SET,Streaming,STREAMING
+#  - RULE-SET,ADs,Ads
   - MATCH,7six
