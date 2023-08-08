@@ -207,10 +207,10 @@ proxy-groups:
       - Opok tsel zeus 6/9/22 exp
       - opok biznet banten
       - opok biznet jakarta
-#      - Opok ID-IKD
+      - Opok ID-IKD
       - Opok ID HERZA
 #      - Opok zeus 05/9/22
-      - opok IKD 20/8/22 exp
+#      - opok IKD 20/8/22 exp
   - name: Auto 
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -228,7 +228,7 @@ proxy-groups:
         - Opok tsel 6/9/22 exp
         - opok biznet jakarta
         - Opok tsel zeus 6/9/22 exp
-#        - Opok ID-IKD
+        - Opok ID-IKD
         - Opok ID HERZA
         - opok ID Uninet
     url: http://www.gstatic.com/generate_204
