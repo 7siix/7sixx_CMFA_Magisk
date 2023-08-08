@@ -184,21 +184,21 @@ proxies:
       Host: zeus.zeaking.my.id
   udp: true
 # 7 hari
-- name: opok IKD 20/8/22 exp
-  server: 104.17.3.81
-  port: 443
-  type: vless
-  uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: api.midtrans.com
-  network: ws
-  ws-opts: 
-    path: ws://api.midtrans.com/fastssh/ggdr/62f7590ac85c7/
-    headers: 
-      Host: id-1.vless.co
-  udp: true
+#- name: opok IKD 20/8/22 exp
+#  server: 104.17.3.81
+#  port: 443
+#  type: vless
+#  uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5
+#  cipher: auto
+#  tls: true
+#  skip-cert-verify: true
+#  servername: api.midtrans.com
+#  network: ws
+#  ws-opts: 
+#    path: ws://api.midtrans.com/fastssh/ggdr/62f7590ac85c7/
+#    headers: 
+#      Host: id-1.vless.co
+#  udp: true
 proxy-groups:
   - name: "7six"
     type: select
@@ -207,7 +207,7 @@ proxy-groups:
       - Opok tsel zeus 6/9/22 exp
       - opok biznet banten
       - opok biznet jakarta
-      - Opok ID-IKD
+#      - Opok ID-IKD
       - Opok ID HERZA
       - Opok zeus 05/9/22
       - opok IKD 20/8/22 exp
@@ -228,7 +228,7 @@ proxy-groups:
         - Opok tsel 6/9/22 exp
         - opok biznet jakarta
         - Opok tsel zeus 6/9/22 exp
-        - Opok ID-IKD
+#        - Opok ID-IKD
         - Opok ID HERZA
         - opok ID Uninet
     url: http://www.gstatic.com/generate_204
